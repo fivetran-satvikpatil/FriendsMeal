@@ -1,0 +1,273 @@
+/* CSS RESET  */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS VARIABLES */
+:root{
+    --navbar-height:50px;
+}
+
+/* NAVIGATION BAR  */
+#navbar{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+     height: 65px;
+    font-family: 'Orelega One', cursive;
+    position: sticky;
+    top: 0;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.7;
+    /* display: block; */
+}
+
+/* NAVIGATION BAR: LOGO AND IMAGE  */
+#logo{
+    margin: 36px 70px;
+    z-index: 1;
+}
+
+#logo img{
+    height: 60px;
+    margin: -25px -46px;
+    
+}
+/* NAVIGATION BAR: LIST STYLING  */
+
+#navbar ul{
+    display: flex;
+    z-index: 1;
+}
+
+#navbar ul li{
+    /* color: white; */
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    /* display: block; */
+    padding: 3px 22px;
+    text-decoration: none;
+    /* border: 2px solid blue; */
+    border-radius: 32px;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* HOME SECTION  */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    height: 432px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 200px;
+}
+
+#home::before{
+    content: "";
+    background: url("../img/bg1.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 52%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Merriweather', serif;
+}
+
+/* SERVICES SECTION  */
+
+#services{
+    margin: 35px;
+    display: flex;
+    position: relative;
+    top: -22px;
+    z-index: -1;
+}
+
+#services .box{
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+    padding: 50px 50px;
+    margin: -15px 12px;
+    border-radius: 25px;
+    background-color: rgb(202, 199, 199);
+    
+}
+
+#services .box:hover{
+    box-shadow: 9px 8px #757373;
+}
+
+#services .box img{
+    height: 150px;
+    padding: 10px 5px;
+    margin: auto;
+    display: block;
+}
+
+/* CLIENT SECTION  */
+
+#client-selection{
+    /* height: 344px; */
+    position: relative;
+    z-index: -2;
+}
+
+#client-selection::before{
+    content: "";
+    background: url("../img/bg2.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clients img{
+    height: 105px;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+/* CONTACT SECTION  */
+
+#contact{
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    background: url(../img/computer.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.4;
+}
+
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 34px;
+}
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    /* text-align: center; */
+    font-family: 'Merriweather', serif;
+    z-index: 1;
+
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Merriweather', serif;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box input[type="submit"]{
+    padding: 7px 20px;
+    margin: 3px 6px;
+}
+
+#contact-box input[type="submit"]:hover{
+    background-color: rgb(121, 120, 120);
+    color: white;
+    cursor: pointer;
+}
+
+/* FOOTER SECTION  */
+
+footer{
+    text-align: center;
+    background-color: rgb(42, 31, 31);
+    color: white;
+    padding: 5px 10px;
+}
+
+/* UTILITY CLASSES  */
+
+.headingprimary{
+    font-size: 2.8rem;
+    padding: 20px 12px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+
+.headingsecondary{
+    font-size: 1.8rem;
+    padding: 6px 20px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+p{
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.btn{
+    padding: 6px 48px;
+    border: 2px solid white;
+    background-color: gray;
+    color: white;
+    font-size: 1.5rem;
+    margin: 14px 65px;
+    border-radius: 40px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(128, 119, 119);
+    color: white;
+}
